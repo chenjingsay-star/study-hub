@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Science Study | Study Hub</title>
+  <link rel="stylesheet" href="{% static 'learning/site.css' %}">
+</head>
+<body>
+  <main class="page-shell science-shell">
+    <header class="site-header">
+      <a class="wordmark" href="{% url 'learning:home' %}" aria-label="Study Hub home">
+        <span class="brand-mark" aria-hidden="true">s</span>
+        <span>study<span class="wordmark-light">hub</span></span>
+      </a>
+      <span class="header-note">A little progress, every day</span>
+    </header>
+
+    <a class="back-link" href="{% url 'learning:home' %}"><span aria-hidden="true">←</span> All subjects</a>
+
+    <section class="science-hero" aria-labelledby="science-title">
+      <p class="eyebrow">YOUR SCIENCE SPACE</p>
+      <h1 id="science-title">Science Study</h1>
+      <p>Welcome! Let’s start with our solar system: a family of planets, moons, and other objects orbiting the Sun.</p>
+    </section>
+
+    <section class="science-content" aria-labelledby="start-title">
+      <p class="eyebrow">A QUESTION TO BEGIN</p>
+      <h2 id="start-title">What makes a planet orbit the Sun?</h2>
+      <p>Explore the planets at your own pace. There’s always something new to notice when you look up.</p>
+    </section>
+
+    <a class="simulator-link" href="{% url 'learning:solar_system' %}">
+      <span class="simulator-icon" aria-hidden="true">◎</span>
+      <span class="simulator-copy"><strong>Open the 3D Solar System</strong><small>Explore the planets in the interactive simulator</small></span>
+      <span class="simulator-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <footer class="site-footer"><span>STUDY HUB · SCIENCE</span><span>Keep wondering. Keep learning.</span></footer>
+  </main>
+</body>
+</html>

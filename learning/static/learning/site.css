@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #17231f;
+  --muted: #74807a;
+  --paper: #f7f7f4;
+  --green: #bce778;
+  --deep-green: #203b2f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page-shell { width: min(1120px, calc(100% - 64px)); margin: 0 auto; }
+.home-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.site-header { height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e5e7e1; }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; font: 800 19px 'Manrope', sans-serif; letter-spacing: -1px; }
+.brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 10px; background: var(--deep-green); color: var(--green); font: 800 19px 'Manrope', sans-serif; }
+.wordmark-light { color: #829087; font-weight: 500; }
+.header-note { color: var(--muted); font-size: 12px; }
+.home-intro { padding: 79px 0 68px; max-width: 620px; }
+.eyebrow { margin: 0; color: #78837b; font-size: 10px; font-weight: 700; letter-spacing: 1.55px; }
+.home-intro .eyebrow { display: flex; align-items: center; gap: 9px; }
+.eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #88b956; box-shadow: 0 0 0 4px #e6f1da; }
+h1, h2, p { margin-top: 0; }
+h1 { margin: 21px 0 17px; font: 700 clamp(48px, 6vw, 72px)/1.04 'Manrope', sans-serif; letter-spacing: -4px; }
+h1 span { color: #729747; }
+.intro-copy { max-width: 420px; margin-bottom: 0; color: #707a74; font-size: 15px; line-height: 1.75; }
+.subjects { padding-bottom: 72px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 19px; }
+.section-heading h2 { margin: 7px 0 0; font: 700 24px 'Manrope', sans-serif; letter-spacing: -.8px; }
+.subject-count { padding-bottom: 4px; color: #8a938c; font-size: 9px; font-weight: 700; letter-spacing: 1.2px; }
+.subject-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.subject-card { min-height: 247px; padding: 22px 24px 19px; border-radius: 15px; display: flex; flex-direction: column; transition: transform .18s ease, box-shadow .18s ease; }
+a.subject-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px #183b271b; }
+.science-card { background: var(--deep-green); color: #f4f7f1; }
+.card-topline { display: flex; align-items: center; justify-content: space-between; }
+.subject-icon { width: 33px; height: 33px; display: grid; place-items: center; border: 1px solid #ffffff35; border-radius: 10px; color: var(--green); font-size: 20px; }
+.card-arrow { color: #d8e8cc; font-size: 20px; }
+.card-title { margin-top: 28px; font: 700 23px 'Manrope', sans-serif; letter-spacing: -.7px; }
+.card-description { max-width: 270px; margin-top: 6px; color: #c5d0c8; font-size: 12px; line-height: 1.6; }
+.card-footer { margin-top: auto; padding-top: 24px; display: flex; align-items: center; gap: 11px; color: #c9e9a5; font-size: 9px; font-weight: 700; letter-spacing: 1.1px; }
+.footer-line { height: 1px; flex: 1; background: #ffffff35; }
+.coming-card { border: 1px solid #e3e6df; background: #fbfbf9; }
+.muted-icon { color: #a2aaa3; border-color: #e1e5df; }
+.coming-label { color: #9ba39d; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.coming-card .card-title { color: #4f5b53; }
+.coming-card .card-description { color: #879089; }
+.coming-card .card-footer { color: #8e9990; }
+.coming-card .footer-line { background: #e2e5df; }
+.site-footer { margin-top: auto; min-height: 58px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e5e7e1; color: #8a938c; font-size: 10px; }
+.site-footer span:first-child { font-size: 9px; font-weight: 700; letter-spacing: 1.2px; }
+
+.science-shell { padding-bottom: 60px; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 27px; color: #66736a; font-size: 12px; }
+.science-hero { min-height: 400px; margin-top: 35px; padding: clamp(30px, 6vw, 66px); display: flex; flex-direction: column; justify-content: center; overflow: hidden; position: relative; border-radius: 20px; background: radial-gradient(ellipse at 80% 40%, #2c5162 0, #172a37 30%, #101c25 65%, #0d171e 100%); color: white; }
+.science-hero::after { content: ''; position: absolute; width: 300px; height: 300px; right: 9%; top: 50%; transform: translateY(-50%); border-radius: 50%; background: radial-gradient(circle at 35% 30%, #f5ce82, #ce783f 36%, #723c36 65%, #351f29 100%); box-shadow: 0 0 70px #d99b5b50, 0 0 0 28px #ffffff08, 0 0 0 60px #ffffff05; }
+.science-hero .eyebrow { position: relative; z-index: 1; color: #c7d7d2; }
+.science-hero h1 { position: relative; z-index: 1; margin: 18px 0 12px; font-size: clamp(44px, 6vw, 68px); letter-spacing: -3px; }
+.science-hero p:last-child { position: relative; z-index: 1; max-width: 390px; margin-bottom: 0; color: #ced9d9; font-size: 14px; line-height: 1.8; }
+.science-content { padding: 34px 2px 0; max-width: 680px; }
+.science-content h2 { margin: 0 0 9px; font: 700 21px 'Manrope', sans-serif; }
+.science-content p { margin: 0; color: #707a74; font-size: 13px; line-height: 1.8; }
+.simulator-link { max-width: 680px; margin-top: 30px; padding: 18px 20px; display: flex; align-items: center; gap: 15px; border: 1px solid #dfe5d9; border-radius: 14px; background: #fff; transition: transform .18s ease, box-shadow .18s ease; }
+.simulator-link:hover { transform: translateY(-2px); box-shadow: 0 12px 24px #183b2712; }
+.simulator-icon { width: 42px; height: 42px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 12px; background: #e9f2df; color: #486b30; font-size: 26px; }
+.simulator-copy { display: flex; flex-direction: column; gap: 4px; }
+.simulator-copy strong { color: #26362d; font: 700 14px 'Manrope', sans-serif; }
+.simulator-copy small { color: #7a857d; font-size: 11px; }
+.simulator-arrow { margin-left: auto; color: #597744; font-size: 20px; }
+
+@media (max-width: 620px) {
+  .page-shell { width: min(100% - 36px, 520px); }
+  .site-header { height: 72px; }
+  .header-note { font-size: 10px; }
+  .home-intro { padding: 65px 0 52px; }
+  h1 { letter-spacing: -2.7px; }
+  .subject-grid { grid-template-columns: 1fr; }
+  .subject-card { min-height: 220px; }
+  .science-hero { min-height: 440px; justify-content: flex-start; }
+  .science-hero::after { width: 210px; height: 210px; top: auto; right: 12%; bottom: 24px; transform: none; }
+  .science-hero p:last-child { max-width: 280px; }
+}

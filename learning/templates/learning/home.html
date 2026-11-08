@@ -1,0 +1,55 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Study Hub</title>
+  <link rel="stylesheet" href="{% static 'learning/site.css' %}">
+</head>
+<body>
+  <main class="page-shell home-shell">
+    <header class="site-header">
+      <a class="wordmark" href="{% url 'learning:home' %}" aria-label="Study Hub home">
+        <span class="brand-mark" aria-hidden="true">s</span>
+        <span>study<span class="wordmark-light">hub</span></span>
+      </a>
+      <span class="header-note">A little progress, every day</span>
+    </header>
+
+    <section class="home-intro" aria-labelledby="welcome-title">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR SPACE TO LEARN</p>
+      <h1 id="welcome-title">Make room for<br><span>curiosity.</span></h1>
+      <p class="intro-copy">Choose a subject and take the next small step. Your learning journey starts here.</p>
+    </section>
+
+    <section class="subjects" aria-labelledby="subjects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PICK UP WHERE YOU LIKE</p>
+          <h2 id="subjects-title">Your subjects</h2>
+        </div>
+        <span class="subject-count">01 SUBJECT</span>
+      </div>
+
+      <div class="subject-grid">
+        <a class="subject-card science-card" href="{% url 'learning:science' %}">
+          <span class="card-topline"><span class="subject-icon" aria-hidden="true">✳</span><span class="card-arrow" aria-hidden="true">↗</span></span>
+          <span class="card-title">Science</span>
+          <span class="card-description">Explore the world, from tiny atoms to distant stars.</span>
+          <span class="card-footer"><span>START EXPLORING</span><span class="footer-line"></span></span>
+        </a>
+        <div class="subject-card coming-card" aria-label="More subjects coming soon">
+          <span class="card-topline"><span class="subject-icon muted-icon" aria-hidden="true">＋</span><span class="coming-label">COMING SOON</span></span>
+          <span class="card-title">More subjects</span>
+          <span class="card-description">Math, English, and more can find a home here.</span>
+          <span class="card-footer"><span>ROOM TO GROW</span><span class="footer-line"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer"><span>STUDY HUB</span><span>Keep wondering. Keep learning.</span></footer>
+  </main>
+</body>
+</html>
